@@ -8,7 +8,6 @@
 
 int main(int argc, char *argv[])
 {
-    FILE* fp;
     int   data;
     char  msg[15] = "OK";
     char  buffer[50];

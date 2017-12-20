@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     FILE *fp = NULL;
     char msg1[30] = {0};
     char msg2[30] = {0};
-    int  data;
+    int  data = -1;
 
     fp = popen("./dummy2 6", "r");
 
@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     printf("***********************************************\n");
 
     int rv = fscanf(fp, "%s%s%d", msg1, msg2, &data);
-    printf("Number of items:%d\n",rv);
+    printf("Number of items:%d\n", rv);
 
     printf("-> %s\n", msg1);
     printf("-> %s\n", msg2);
