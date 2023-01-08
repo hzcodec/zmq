@@ -13,6 +13,8 @@ socket.subscribe(TOPIC)
 
 while True:
     rv = socket.recv_multipart()
+    print(rv[1])
+
     print('[SUB] - Topic:', rv[0].decode('ascii'))
     print('[SUB] - Message:', rv[1].decode('ascii'))
     print('[SUB] - Message:', rv[2].decode('ascii'))
@@ -20,5 +22,10 @@ while True:
     str_val = rv[1].decode('utf-8')
     f_val = float(str_val)
 
+    if rv[1] == b'1.1':
+        break
+
+
+print('Client closed')
 socket.close()
 context.term()
