@@ -6,7 +6,7 @@ port = "5500"
 context = zmq.Context()
 socket = context.socket(zmq.SUB)
 
-print('Connect to localhost port %s' % port) 
+print('Connect to localhost port %s' % port)
 socket.connect("tcp://localhost:%s" % port)
 
 topicfilter = "10001"
