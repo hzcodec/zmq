@@ -12,14 +12,14 @@ s.bind('tcp://{}:{}'.format(HOST, PORT))
 
 local_value = 0.1
 
+msg = {
+    'code': 200,
+    'text': 'Hello from server',
+    'Value': local_value
+}
+
 while True:
     print('Server is running ...')
-
-    msg = {
-        'code': 200,
-        'text': 'Hello from server',
-        'Value': local_value
-    }
 
     msg_json = json.dumps(msg)
 
@@ -29,3 +29,4 @@ while True:
     msg['Value'] = local_value
     local_value += .2
     local_value = round(local_value, 2)
+    print(local_value)
