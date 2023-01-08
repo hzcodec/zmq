@@ -8,6 +8,7 @@ context = zmq.Context()
 socket = context.socket(zmq.SUB)
 
 socket.connect('tcp://{}:{}'.format(HOST, PORT))
+print('Connect to Host: {} - Port: {}'.format(HOST, PORT))
 
 socket.subscribe(TOPIC)
 
