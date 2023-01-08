@@ -13,4 +13,7 @@ while True:
     msg = s.recv()
 
     ds = json.loads(msg)
-    print('%s :: %s - %s' % (ds['code'], ds['text'], ds['Value']))
+
+    # print('%s :: %s - %s' % (ds['code'], ds['text'], ds['Value']))
+    # print(msg)
+    print(ds['Value'])
