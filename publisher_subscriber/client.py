@@ -14,6 +14,13 @@ while True:
 
     ds = json.loads(msg)
 
-    # print('%s :: %s - %s' % (ds['code'], ds['text'], ds['Value']))
+    print('%s :: %s - %s' % (ds['code'], ds['text'], ds['Value']))
     # print(msg)
-    print(ds['Value'])
+    # print(ds['Value'])
+
+    if ds['Value'] > 1.8:
+        break
+
+print('Close connection')
+s.close()
+ctx.term()
